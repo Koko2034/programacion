@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class probando {
+
+	public static void main(String[] args) {
+
+		
+		String cadena1="hola";
+		String caden2="dfkjbdsfkbsd";
+		if (cadena1.compareTo(cadena2) == 0)
+			System.out.println("cadena1 y cadena2 son iguales");
+			else
+			if (cadena1.compareTo(cadena2) < 0)
+			System.out.println ("cadena1 va antes que cadena2");
+			else
+			if (cadena1.compareTo(cadena2) > 0) System.out.println("cadena2 va
+			después que cadena1");
+		
+		
+	}
+}

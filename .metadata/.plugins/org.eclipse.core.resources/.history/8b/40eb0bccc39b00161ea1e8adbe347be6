@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class probando {
+
+	public static void main(String[] args) {
+
+		int j = 2;
+		switch (j) {
+		case 5:
+		System.out.println("********");
+		case 4:
+		System.out.println("********");
+		case 3:
+		System.out.println("********");
+		case 2:
+		System.out.println("********");
+		case 1:
+		System.out.println("********");
+		}
+		
+		
+	}
+}

@@ -1,0 +1,40 @@
+/*
+ * Muestra por pantalla todos los números primos entre 2 y 100,
+ambos incluidos
+ */
+
+import java.util.Scanner;
+
+public class ProblemasPropuestos5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado=new Scanner(System.in);
+		
+		char A='a';
+		
+		System.out.println("Quieres ver todos los numeros primos entre 2 y 100(s/n)");
+		A=teclado.nextLine().charAt(0);
+		if(A=='s'){
+			
+		
+		int B;
+		int C;
+		for(int n=2;n<=10;n++){
+			B=1;
+			for(int s=2;s<=n;s++){
+				C=n%s;
+			
+				if(C!=0){
+					B=s*B;
+					
+				}if(n==B){
+				System.out.println(B);
+	}
+		}
+		}
+		
+		}	
+}
+}

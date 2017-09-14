@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class probando {
+
+	public static void main(String[] args) {
+
+		Scanner teclado=new Scanner(System.in);
+	
+		
+	int numero=0;
+	int factorial=1;
+	
+		int j;
+		for(int i=2;i<=10;i++){
+			numero=i;
+			for(j=i-1;j>0;j--){
+				factorial=factorial*j;
+				
+			}
+			
+			System.out.println("El factorial del numero "+ numero + " es el numero " + factorial);
+		}
+		
+		
+	}
+}

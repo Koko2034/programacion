@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Probando {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado=new Scanner(System.in);
+		int A=0;
+		String B;
+		String C;
+		System.out.println("Introduce el numero de bits");
+		A=teclado.nextInt();
+		System.out.println("introduce el numero");
+		teclado.nextLine();
+		B=teclado.nextLine();
+		int longitud1=0;
+		int Posicion;
+		longitud1=B.length();
+		Posicion=B.lastIndexOf(',');
+		System.out.println(Posicion);
+		System.out.println(longitud1);
+		C=B.substring(2, longitud1-1);
+		System.out.println(C);
+	
+		}
+		
+		
+		
+	}
+	
+		
+	
+
+
+	

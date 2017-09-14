@@ -1,0 +1,99 @@
+import java.util.Scanner;
+
+public class ProblemasPropuestos9 {
+
+	static int[]dia=new int[3];
+	static String[]encuestadores=new String[5];
+	static int[]ganancia=new int[3];
+	static int[]premios=new int[3];
+	static void iniciar(){
+		Scanner teclado=new Scanner(System.in);
+		for(int i=0;i<encuestadores.length;i++){
+		System.out.println("Introduzca un nombre");
+		encuestadores[i]=teclado.nextLine();
+		}
+		teclado.nextLine();
+		for(int i=0;i<dia.length;i++){
+			dia[i]=(int)(Math.random()*500+0);
+		}
+		}
+	static void ordenar(){
+		for(int k=0;k< encuestadores.length-1;k++) {
+			for(int f=0;f< encuestadores.length -1-k;f++) {
+			if (encuestadores[f].compareTo(encuestadores[f+1])>0) {
+			String aux;
+			aux=encuestadores[f];
+			encuestadores[f]=encuestadores[f+1];
+			encuestadores[f+1]=aux;
+			int auxdia;
+			auxdia=dia[f];
+			dia[f]=dia[f+1];
+			dia[f+1]=auxdia;
+			}
+			}
+			}
+			}
+		static void calculoganancias(){
+			for(int i=0;i<ganancia.length;i++){
+				int ganancia=0;
+				for(int k=0;k<dia.length;i++){
+					ganancia=dia[k]*1;
+				}
+				
+			}
+		}
+		static void calculopremios(){
+		for(int i=0;i<premios.length;i++){
+			boolean control=true;
+			int mayor=0;
+			for(int k=0;k<dia.length;k++){
+				if(dia[i]<=100)control=false;
+			}
+			if(control){
+				for(int j=0;j<premios.length;j++){
+					premios[j]=premios[j]+100;
+				}
+			}
+			
+		}
+			
+			
+		}
+		
+		static void imprimir(){
+			System.out.print("Encuestadores dia 1  dia 2 dia 3 Ganancia Premios");
+		for(int i=0;i<encuestadores.length;i++){
+			System.out.println();
+			System.out.print(encuestadores[i]+" ");
+			for(int k=0;k<dia.length;k++)System.out.print(dia[k]+ " ");
+			System.out.print(ganancia[i]);
+		}	
+		}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*
+		 * 9.-Una empresa dispone de 5 encuestadores para realizar una campaña.
+Por cada encuesta paga 1€ y además se establecen los siguientes premios:
+Uno de 200€ al encuestador que mayor número de encuestas realice y
+otros de 100 € para todos aquellos que hagan 100 encuestas como
+mínimo durante todos y cada uno de los días que dura la campaña.
+La campaña dura 3 días y de cada encuestador se introduce nombre
+y las encuestas realizadas en cada uno de los 3 días (generar un numero
+aleatoriomentre 0 y 500).
+Se desea un programa que al final imprima un listado con el siguiente
+formato:
+NOMBRE APELLIDOS DIA-1 DIA-2 DIA-3 GANANCIAS PREMIO
+El listado debe ir en orden alfabético, lógicamente los datos no se introducen
+ordenados.
+		 */
+		iniciar();
+		
+		calculoganancias();
+		
+		imprimir();
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+/*
+ * Muestra por pantalla todos los números primos entre 2 y 100,
+ambos incluidos
+ */
+
+
+public class ProblemasPropuestos5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int B;
+		int C;
+		for(int n=2;n<=1000;n++){
+			B=1;
+			for(int s=2;s<n;s++){
+				C=n%s;
+				if(C==0)B=B+s;
+	}
+
+		}
+}
+}

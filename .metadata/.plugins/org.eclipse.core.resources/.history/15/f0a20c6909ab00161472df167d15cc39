@@ -1,0 +1,24 @@
+
+public class ProblemasPropuestos9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*
+		 * 9.-Una empresa dispone de 5 encuestadores para realizar una campaña.
+Por cada encuesta paga 1€ y además se establecen los siguientes premios:
+Uno de 200€ al encuestador que mayor número de encuestas realice y
+otros de 100 € para todos aquellos que hagan 100 encuestas como
+mínimo durante todos y cada uno de los días que dura la campaña.
+La campaña dura 3 días y de cada encuestador se introduce nombre
+y las encuestas realizadas en cada uno de los 3 días (generar un numero
+aleatoriomentre 0 y 500).
+Se desea un programa que al final imprima un listado con el siguiente
+formato:
+NOMBRE APELLIDOS DIA-1 DIA-2 DIA-3 GANANCIAS PREMIO
+El listado debe ir en orden alfabético, lógicamente los datos no se introducen
+ordenados.
+		 */
+	}
+
+}

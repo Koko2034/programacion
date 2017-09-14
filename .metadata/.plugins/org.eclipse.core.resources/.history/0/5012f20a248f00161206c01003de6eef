@@ -1,0 +1,87 @@
+import java.util.Scanner;
+
+public class aaa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int A=0;;
+		int B=0;
+		Scanner teclado=new Scanner(System.in);
+		System.out.println("Introduce el numero de bits");
+		A=teclado.nextInt();
+		System.out.println("introduce el numero");
+		B=teclado.nextInt();
+		String D="";
+		String E="";
+		if(B>0){
+		for(double i=Math.pow(2, A-1);i>=1;i/=2){
+			if(B-i>=0){
+				D="1";
+				E=E+D;
+				B=(int) (B-i);
+			}else if(B-i<0){
+				D="0";
+				E=E+D;
+			}
+			
+		}
+		
+		}if(B<0){
+			B=Math.abs(B);
+			for(double i=Math.pow(2, A-1);i>=1;i/=2){
+				if(B-i>=0){
+					D="1";
+					E=E+D;
+					B=(int) (B-i);
+				}else if(B-i<0){
+					D="0";
+					E=E+D;
+				}
+		}}
+		
+	int L;
+	int DE=0;
+	String J="";
+	String C="";
+		L=E.length();
+		String H;
+		for(int i=0;i<=L;i++){
+			B=E.length();
+			if(L==1){
+		char P;
+		P=E.charAt(0);
+		if(P=='1'){
+			DE=1;}
+		if(P!='1'){
+			DE=0;}
+		System.out.println(DE);
+		L=0;
+		H=DE+"";
+		J=H+J;}
+		if(L==2){
+			B=0;
+			DE=(Integer.parseInt(E.substring(0,1))*2)+(Integer.parseInt(E.substring(1,2))*1);
+			H=DE+"";
+			J=H+J;}
+		if(L==3){
+			L=0;
+			DE=(Integer.parseInt(E.substring(0,1))*4)+(Integer.parseInt(E.substring(1,2))*2)+(Integer.parseInt(E.substring(2,3))*1);
+			H=DE+"";
+			J=H+J;}
+		if(L>3){
+			C=E.substring(L-3, L);
+			DE=(Integer.parseInt(C.substring(0,1))*4)+(Integer.parseInt(C.substring(1,2))*2)+(Integer.parseInt(C.substring(2,3))*1);
+			E=E.substring(0,L-3);
+			L=E.length();	
+			H=D+"";
+			J=H+J;}
+			}System.out.println(J);
+		
+		
+	}
+		
+	
+
+}
+	

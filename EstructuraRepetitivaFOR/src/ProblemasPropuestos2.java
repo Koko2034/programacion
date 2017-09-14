@@ -1,0 +1,29 @@
+/*
+ *Desarrollar un programa que solicite la lectura de 10 numeros e imprima la suma de los ultimos 5 valores 
+ */
+import java.util.Scanner;
+
+public class ProblemasPropuestos2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+Scanner teclado=new Scanner(System.in);
+
+int A=0;//numeros
+int B=0;
+
+for(int f=1;f<=10;f++){
+	System.out.println("Introduzca un valor");
+	A=teclado.nextInt();
+	if(f>5){
+		B=A+B;
+	}
+	
+}
+
+System.out.println("La suma de los ultimos 5 numeros es " + B);
+		
+	}
+
+}

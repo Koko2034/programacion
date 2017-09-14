@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Probando {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String A;
+		int B;
+		String C="";
+		int D=0;
+		int E=0;
+		String J="";
+		Scanner teclado=new Scanner(System.in);
+		System.out.println("Introduzca un numero");
+		A=teclado.nextLine();
+		B=A.length();
+		String H;
+		
+		if(B>3){
+			C=A.substring(B-3, B);
+			D=(Integer.parseInt(C.substring(0,1))*4)+(Integer.parseInt(C.substring(1,2))*2)+(Integer.parseInt(C.substring(2,3))*1);
+			A=A.substring(0,B-3);
+			H=D+"";
+			J=J+H;
+			System.out.println(A);
+		}
+	
+		}
+		
+		
+		
+		
+		
+	}
+		
+	
+
+
+	

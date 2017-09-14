@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class probando {
+
+	public static void main(String[] args) {
+	
+		Scanner teclado=new Scanner(System.in);
+		boolean ramses=true;
+		char confirmacion=' ';
+		while(ramses==false){
+			System.out.println("Quieres iniciar programa");
+			confirmacion=teclado.next().charAt(0);
+			if(confirmacion=='s')ramses=true;
+			
+		}
+		
+		System.out.println("JAvi me ha enseñado muy bien");
+	}
+}

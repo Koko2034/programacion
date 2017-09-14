@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class probando {
+
+	public static void main(String[] args) {
+
+		Scanner teclado=new Scanner(System.in);
+	
+	String frase="";
+	System.out.println("Introduzca una frase");
+	frase=teclado.nextLine();
+	char frase2;
+	int longitud=frase.length();
+	String frase3="";
+	while(longitud>=0){
+		
+		frase3=frase3 + frase.charAt(longitud-1);
+		longitud--;
+	}
+	System.out.println(frase3);
+		
+	}
+}

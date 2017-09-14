@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Probando {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado=new Scanner(System.in);
+		int A=0;
+		int B;
+		System.out.println("Introduce el numero de bits");
+		A=teclado.nextInt();
+		System.out.println("introduce el numero");
+		B=teclado.nextInt();
+		String D="";
+		String E="";
+			if(B>0){
+				for(double i=Math.pow(2,-1);i>=0;i/=2){
+					if(B-i>=0){
+							D="1";
+							E=E+D;
+							B=(int) (B-i);
+					}else if(B-i<0){
+							D="0";
+							E=E+D;
+			}
+		}System.out.println(E);
+	
+		}
+		
+		
+		
+	}}
+		
+	
+		
+	
+
+
+	

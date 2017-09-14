@@ -1,0 +1,34 @@
+/*
+ * Realiza un programa que permita conocer la nota media, la nota más alta y la mas baja de una
+clase con un número indeterminado de alumnos.
+ */
+import java.util.Scanner;
+
+
+public class ProblemasPropuestos1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado=new Scanner(System.in);
+	
+		int A;
+		int B=0;
+		int C=0;
+		
+	System.out.println("¿Cual es el numero de alumnos?");
+	A=teclado.nextInt();
+	
+	while(A!=B){
+		int nota=(int) (Math.random()*0+11);
+		System.out.println(nota);
+		C=C+nota;
+		B++;
+		
+	}
+	
+	System.out.println("La nota media es " + (C/A));
+		
+	}
+
+}

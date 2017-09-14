@@ -1,0 +1,29 @@
+/*
+ * Realiza un programa que sume los 100 números siguientes a un número
+entero y positivo introducido por teclado. Se debe comprobar que el
+dato introducido es correcto (que es un número positivo).
+ */
+
+import java.util.Scanner;
+
+public class ProblemasPropuestos2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		Scanner teclado=new Scanner(System.in);
+		int A;
+		int B;
+	System.out.println("Introduce un valor numerico positivo");
+	A=teclado.nextInt();
+	B=A;
+	if(A>0){
+		for(int i=0;i<=100;i++)B=B+1;			
+	}else{
+		System.out.println("Debes introducir un numero positivo el numero introducido es negativo");
+	}
+	System.out.println("La sumatoria de los 100 numeros siguientes a tu numero " + A + " es " + B);
+	}
+
+}

@@ -1,0 +1,40 @@
+/*
+ * Confeccionar un programa que lea n pares de datos, cada par de datos corresponde a la medida de la base y la altura de un truangulo. El programa debera informar:
+ * a) de cada triangulo la medida de su base, su altura y su superficie.
+ * b)La cantidad de triangulos cuya superficie es mayor a 12.
+ */
+import java.util.Scanner;
+
+public class ProblemasPropuestos1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado=new Scanner(System.in);
+		
+		int A=0; // pares de datos de base y altura;
+		
+		System.out.println("¿Cuantas parejas de datos va a ingresar?");
+		
+		A=teclado.nextInt();
+		int B=0;// base del triangulo
+		int C=0; // altura del triangulo
+		
+		int E=0;//triangulos con base mayor de 12
+
+		for(int f=1;f<=A;f++){
+			System.out.println("Ingrese el valor de la base");
+		B=teclado.nextInt();
+			System.out.println("Ingrese el valor de la altura");
+			C=teclado.nextInt();
+			System.out.println("La altura del triangulo " + f + " es " + C);
+			System.out.println("La base del triangulo " + f + " es " + B);
+			System.out.println("El area del triangulo " + f + " es " + (C*B)/2);
+			if(((C*B)/2)>12){
+				E=E+1;
+			}
+		}
+		System.out.println("De los  " + A + "triangulos tienen un area superior a 12 " + E);
+	}
+
+}

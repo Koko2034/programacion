@@ -1,0 +1,64 @@
+import java.util.Scanner;
+public class Loteria {
+static int[]ganadora=new int[7];
+static int[]comprobacion=new int[50];
+static int[]boleto=new int[7];
+	static void premio(){
+	System.out.println("El reparto de premios de la loteria del dia de hoy es:");
+	int i=(int)(Math.random()*25+20)*100000;
+	System.out.println("6 Aciertos y Complementario: " + i + " € ");
+	i=(int)(Math.random()*15+10)*100000;
+	System.out.println("6 Aciertos: " + i + " € ");
+	i=(int)(Math.random()*25+20)*10000;
+	System.out.println("5 Aciertos y Complementario: " + i + " € ");
+	i=(int)(Math.random()*15+10)*10000;
+	System.out.println("5 Aciertos: " + i + " € ");
+	i=(int)(Math.random()*25+20)*1000;
+	System.out.println("4 Aciertos y Complementario: " + i + " € ");
+	i=(int)(Math.random()*15+10)*1000;
+	System.out.println("4 Aciertos: " + i + " € ");
+	i=(int)(Math.random()*25+20)*100;
+	System.out.println("3 Aciertos y Complementario: " + i + " € ");
+	i=(int)(Math.random()*15+10)*100;
+	System.out.println("3 Aciertos: " + i + " € ");
+	i=(int)(Math.random()*25+20)*10;
+	System.out.println("2 Aciertos y Complementario: " + i + " € ");
+	i=(int)(Math.random()*15+10)*10;
+	System.out.println("2 Aciertos: " + i + " € ");
+	
+}	
+	static void ganadora(){
+		int j=0;
+		while(j<ganadora.length-1){
+			int i=(int)(Math.random()*48+1);
+			if(comprobacion[i]==0){
+				comprobacion[i]=1;
+				ganadora[j]=i;
+				j++;}
+			}j=(int)(Math.random()*9+1);
+			ganadora[ganadora.length-1]=j;
+		}
+	static void ver_ganadora(){
+		System.out.println("La combinacion ganadora es:");
+		for(int i=0;i<ganadora.length-1;i++)System.out.print ( ganadora[i] + " ");
+		System.out.println();
+	System.out.println("El numero complementario es " + ganadora[ganadora.length-1]);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ganadora();
+		premio();
+		Scanner teclado=new Scanner(System.in);
+		int i=0;
+		int j;
+		while(i<7){
+			System.out.println("Introduce el numero " + (i+1) + " de tu boleto.");
+			j=teclado.nextInt();
+			if(i>0 && i<50){
+				boleto[i]=j;
+				i++;
+			}else System.out.println("El numero escogido no es valido. Solo numeros entre 1 y 49");
+		}
+		ver_ganadora();
+		}
+	}

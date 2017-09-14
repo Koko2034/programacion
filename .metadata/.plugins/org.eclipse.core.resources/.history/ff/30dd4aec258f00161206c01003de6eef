@@ -1,0 +1,111 @@
+import java.util.Scanner;
+
+
+public class CalculadoraBinario {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado=new Scanner(System.in);
+		int A;
+		int B;
+		System.out.println("Calculadora");
+		System.out.println("1.Cambiar de decimal a binario");
+		System.out.println("2.Cambiar de decimal a Octal");
+		System.out.println("3.Cambiar de decimal a Hexadecimal");
+		A=teclado.nextInt();
+		if(A==1){
+			System.out.println("Introduce el numero de bits");
+			A=teclado.nextInt();
+			System.out.println("introduce el numero");
+			B=teclado.nextInt();
+			String D="";
+			String E="";
+			if(B>0){
+			for(double i=Math.pow(2, A-1);i>=1;i/=2){
+				if(B-i>=0){
+					D="1";
+					E=E+D;
+					B=(int) (B-i);
+				}else if(B-i<0){
+					D="0";
+					E=E+D;
+				}
+				
+			}System.out.println(E);
+			
+			}if(B<0){
+				B=Math.abs(B);
+				for(double i=Math.pow(2, A-1);i>=1;i/=2){
+					if(B-i>=0){
+						D="1";
+						E=E+D;
+						B=(int) (B-i);
+					}else if(B-i<0){
+						D="0";
+						E=E+D;
+					}
+			}System.out.println("-"+E);}}
+		
+		else if(A==2){
+			System.out.println("Introduce el numero de bits");
+			A=teclado.nextInt();
+			System.out.println("introduce el numero");
+			B=teclado.nextInt();
+			String D="";
+			String E="";
+			if(B>0){
+			for(double i=Math.pow(2, A-1);i>=1;i/=2){
+				if(B-i>=0){
+					D="1";
+					E=E+D;
+					B=(int) (B-i);
+				}else if(B-i<0){
+					D="0";
+					E=E+D;
+				}
+				
+			}System.out.println(E);
+			
+			}if(B<0){
+				B=Math.abs(B);
+				for(double i=Math.pow(2, A-1);i>=1;i/=2){
+					if(B-i>=0){
+						D="1";
+						E=E+D;
+						B=(int) (B-i);
+					}else if(B-i<0){
+						D="0";
+						E=E+D;
+					}
+			}System.out.println("-"+E);}
+			
+			
+			
+			
+		}else if(A==3){
+			System.out.println("Introduce el numero de bits");
+			A=teclado.nextInt();
+			System.out.println("introduce el numero");
+			B=teclado.nextInt();
+			String D="";
+			String E="";
+			for(double i=Math.pow(2, 7);i>=1;i/=2){
+				if(B-i>=0){
+					D="1";
+					E=E+D;
+					B=(int) (B-i);
+				}else if(B-i<0){
+					D="0";
+					E=E+D;
+				}
+				
+			}System.out.println(E);
+			
+			
+		}else if(A!=1 || A!=2 || A!=3){
+			System.out.println("Error");
+		}
+	}
+
+}
